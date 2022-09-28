@@ -1,0 +1,4 @@
+---
+- debug:
+    msg: "format these partitions {{ item }}"
+  loop: "{{ partitions }}"

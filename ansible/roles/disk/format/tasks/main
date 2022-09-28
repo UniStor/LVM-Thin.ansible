@@ -1,0 +1,22 @@
+---
+- debug:
+    msg: "format these disks {{ item }}"
+  loop: "{{ drives }}"
+
+- name: Create a new primary partition for LVM
+  become: yes
+  community.general.parted:
+    device: "/dev/{{ item }}"
+    name:
+    label: gpt
+    number: 2
+    flags: [ lvm ]
+    state: present
+  loop: "{{ drives }}"
+  loop_control:
+    index_var: pvnumber
+
+
+- name: get Partition-Table-UUID
+  command: sudo blkid -s PTUUID -o value /dev/sdb
+  loop:

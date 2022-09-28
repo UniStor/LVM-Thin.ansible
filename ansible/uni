@@ -1,0 +1,11 @@
+---
+- hosts: local
+  vars:
+    drives:
+      - sdb
+    partitions:
+      - 1
+      - 2
+
+  roles:
+  - disk/format

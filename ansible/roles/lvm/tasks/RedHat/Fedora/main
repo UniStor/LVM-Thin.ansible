@@ -1,0 +1,7 @@
+---
+- name: install lvm & thin-provisioning-tools
+  ansible.builtin.dnf:
+    name:
+      - lvm2
+    state: latest
+  become: true
