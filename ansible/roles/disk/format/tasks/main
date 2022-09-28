@@ -1,4 +1,8 @@
 ---
+- name: Exterminate mankind
+  pause:
+    prompt: "Do you really want to overwrite these Disks? {{drives}}"
+
 - debug:
     msg: "format these disks {{ item }}"
   loop: "{{ drives }}"
