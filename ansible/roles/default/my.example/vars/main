@@ -1,0 +1,7 @@
+---
+drives:
+  - sdXY
+
+partitions:
+  - 1
+  - 2

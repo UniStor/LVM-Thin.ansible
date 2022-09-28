@@ -1,7 +1,2 @@
 ---
-drives:
-  - sdXY
-
-partitions:
-  - 1
-  - 2
+vg_name: pool0

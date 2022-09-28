@@ -1,11 +1,12 @@
 ---
 - hosts: local
   vars:
+    whole_disk: true #false
+
     drives:
-      - sdb
-    partitions:
-      - 1
-      - 2
+      - sdN #b
 
   roles:
-  - disk/format
+  # - disk/format
+  - default
+  - pv/create

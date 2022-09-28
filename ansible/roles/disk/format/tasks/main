@@ -19,8 +19,3 @@
   loop: "{{ drives }}"
   loop_control:
     index_var: pvnumber
-
-
-- name: get Partition-Table-UUID
-  command: sudo blkid -s PTUUID -o value /dev/sdb
-  loop:

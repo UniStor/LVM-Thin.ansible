@@ -1,0 +1,10 @@
+---
+- name: Create a volume group on top of /dev/sdb with physical extent size = 128KiB
+  become: yes
+  community.general.lvg:
+    vg: "{{ vg_name }}"
+    pvs: "/dev/{{ item }}"
+    pesize: 128K
+  loop: "{{ drives }}"
+
+# If this Fails, you need to run `wipefs -af /dev/sd$N first`

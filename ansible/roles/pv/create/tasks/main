@@ -1,0 +1,6 @@
+---
+- include_tasks: whole disk/main
+  when: whole_disk
+
+- include_tasks: partition/main
+  when: not whole_disk

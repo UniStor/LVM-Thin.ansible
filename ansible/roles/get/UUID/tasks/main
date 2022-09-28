@@ -1,0 +1,5 @@
+---
+- name: get Partition-Table-UUID
+  become: yes
+  command: blkid -s PTUUID -o value /dev/sdb
+  loop: "{{ drives }}"
