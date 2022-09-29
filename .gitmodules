@@ -1,0 +1,3 @@
+[submodule ".uni/my.stor"]
+	path = .uni/my.stor
+	url = https://github.com/UniStor/my.stor.git
